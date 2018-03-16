@@ -12,6 +12,6 @@ for line in lines:
  data = urllib.urlencode(data)
  request = requests.post('https://servicearizona.com/webapp/vehicle/plates/personalizedChoiceSearch.do', data=data, headers={'Content-Type':'application/x-www-form-urlencoded'})
  data = request.text
- if "is not available." not in data:
+ if "is available" in data:
 	print(word + " IS AVAILABLE");
 
